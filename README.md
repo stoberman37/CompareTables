@@ -1,5 +1,5 @@
 # CompareTables
-Simple script to to a simple job - compare two tables.  Actually, this will basically work on anything which can be viewed a set of results - a table, a view, probably even a table-valued function.  (Caveat - its never been tested with a table-valued function, but as long as the script that's generated would call it correctly, this should work.)
+Simple script to do a simple job - compare two tables.  Actually, this will basically work on anything which can be viewed a set of results - a table, a view, probably even a table-valued function.  (Caveat - its never been tested with a table-valued function, but as long as the script that's generated would call it correctly, this should work.)
 
 It's a deceptively simple script - basically, you just select from both tables, UNION ALL them together, and then GROUP BY.  When a row from each table is equal to one another, you will end up with a COUNT of 2.  So any of the GROUP BYs not having a count of 2 means a mismatch.  
 
